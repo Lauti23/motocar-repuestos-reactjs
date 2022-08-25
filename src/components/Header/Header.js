@@ -6,7 +6,7 @@ import PersonIcon from '@mui/icons-material/Person';
 
 const Header = () => {
   return (
-    <header className='header'>
+    
         <nav className='nav'>
             <img src={img} alt="" className='logo'></img>
             
@@ -20,7 +20,7 @@ const Header = () => {
               <a href='/'><PersonIcon fontSize='large'/></a>
             </div>
         </nav>
-    </header>
+    
   )
 }
 
