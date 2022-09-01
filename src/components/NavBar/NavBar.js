@@ -1,10 +1,10 @@
 import React from 'react'
 import img from './logoMotocar.jpg'
-import './Header.css'
-import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
+import './NavBar.css'
 import PersonIcon from '@mui/icons-material/Person';
+import CartWidget from '../CartWidget/CartWidget';
 
-const Header = () => {
+const NavBar = () => {
   return (
     
         <nav className='nav'>
@@ -16,7 +16,7 @@ const Header = () => {
                 <li className='items'><a href='/'>INDUMENTARIA</a></li>
             </ul>
             <div className='userIcons'>
-              <a href='/'><LocalGroceryStoreIcon fontSize='large'/></a>
+              <a href='/'><CartWidget/></a>
               <a href='/'><PersonIcon fontSize='large'/></a>
             </div>
         </nav>
@@ -24,4 +24,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default NavBar

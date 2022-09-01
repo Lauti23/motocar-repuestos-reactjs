@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header/Header';
-import CardComponent from './components/Cards/Cards';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import NavBar from './components/NavBar/NavBar';
 
 
 
@@ -10,7 +9,7 @@ function App () {
   return (
     <>
       <header>
-        <Header/>
+        <NavBar/>
       </header>
       <main className='main'>
         <ItemListContainer/>
