@@ -2,14 +2,12 @@ import React from 'react';
 import './App.css';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from './components/NavBar/NavBar';
+import ItemList from './components/ItemList/ItemList';
 
 
 
 function App () {
   
-  fetch('https://rickandmortyapi.com/api/character')
-  .then(response => response.json())
-  .then(json => console.log(json.results))
   
   return (
     <>
@@ -18,6 +16,7 @@ function App () {
       </header>
       <main className='main'>
         <ItemListContainer/>
+        <ItemList/>
 
       </main>
     </>

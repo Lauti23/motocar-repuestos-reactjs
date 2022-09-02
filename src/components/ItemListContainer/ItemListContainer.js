@@ -1,10 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import ItemList from '../ItemList/ItemList'
+import productos from '../mock/productos'
 
 const ItemListContainer = () => {
-  return (
-    <div className='itemListContainer'>
-        <h1 className='greeting'>Hola, este es el ItemListContainer</h1>
-    </div>
+    
+    const [bikes , setBikes] = useState([])
+    
+    const getProducts = () => new Promise((resolve, reject) => {
+        setTimeout(() => resolve(productos), 2000)
+    })
+
+    useEffect(()=> {
+        getProducts()
+        .then(productos => setBikes(productos))
+        .catch(error => console.error(error))
+    }, [])
+    // console.log(bikes)
+  
+    return (
+    
+      <ItemList bikes={bikes} />
+    
   )
 }
 
