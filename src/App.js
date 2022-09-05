@@ -16,7 +16,7 @@ function App () {
       </header>
       <main className='main'>
         <ItemListContainer/>
-        <ItemList/>
+        {/* <ItemList/> */}
 
       </main>
     </>
