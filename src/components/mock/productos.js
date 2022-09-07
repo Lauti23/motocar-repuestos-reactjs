@@ -11,9 +11,9 @@ const productos = [
     {id:10, marca: "Suzuki", modelo: "RM-Z 250", precio: 1001055, imagen: "../assets/imgs/suzuki/rm-z250.jpg", cantidad: 1},
     {id:11, marca: "Suzuki", modelo: "RM-Z 450", precio: 1018670, imagen: "../assets/imgs/suzuki/rm-z450.jpg", cantidad: 1},
     {id:12, marca: "Suzuki", modelo: "RM-Z 450 2017", precio: 959095, imagen: "../assets/imgs/suzuki/rm-z4502017.jpg", cantidad: 1},
-    {id:13, marca: "Yamaha", modelo: "WR 450", precio: 1198870, imagen: "../assets/imgs/yamaha/wr450f.jpg", cantidad: 1},
-    {id:14, marca: "Yamaha", modelo: "YZ 250", precio: 995060, imagen: "../assets/imgs/yamaha/yz250.jpg", cantidad: 1},
-    {id:15, marca: "Yamaha", modelo: "YZ 450", precio: 1155095, imagen: "../assets/imgs/yamaha/yz450f.jpg", cantidad: 1}
+    {id:13, marca: "Yamaha", modelo: "WR 450", precio: 1198870, imagen: "../../../public/assets/yamaha/wr450f.jpg", cantidad: 1},
+    {id:14, marca: "Yamaha", modelo: "YZ 250", precio: 995060, imagen: "../../../public/assets/yamaha/yz250.jpg", cantidad: 1},
+    {id:15, marca: "Yamaha", modelo: "YZ 450", precio: 1155095, imagen: "../../../public/assets/yamaha/yz450f.jpg", cantidad: 1}
 ]
 
 export default productos

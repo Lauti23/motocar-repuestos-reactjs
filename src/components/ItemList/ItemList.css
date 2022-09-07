@@ -2,6 +2,10 @@
     width: 80%;
     margin: auto;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
+}
+.card {
+    width: 40%;
 }
