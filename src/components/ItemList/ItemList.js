@@ -8,19 +8,19 @@ const ItemList = ({bikes}) => {
     // console.log(bikes)
     
     return (
-    <div className="itemList">
-        {bikes.map((bike) => {
-            return (
-                <div className='card'>
-                    <img src={bike.imagen} alt='moto'></img>
-                    <p>{bike.marca}</p>
-                    <p>{bike.modelo}</p>
-                    <p>{bike.precio}</p>
-                    <button href="/">Detalle</button>
-                </div>)
-        })}
-        
-    </div>
+        <div className="itemList">
+            {bikes.map((bike) => {
+                return (
+                    <div className='card'>
+                        <img src={bike.imagen} alt='moto'></img>
+                        <p>{bike.marca}</p>
+                        <p>{bike.modelo}</p>
+                        <p>{bike.precio}</p>
+                        <button href="/">Detalle</button>
+                    </div>
+                    )
+                })}
+        </div>
     )
 }
 

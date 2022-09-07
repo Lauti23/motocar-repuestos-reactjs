@@ -6,7 +6,7 @@ import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
   return (
-    
+      <header>
         <nav className='nav'>
             <img src={img} alt="" className='logo'></img>
             
@@ -20,7 +20,7 @@ const NavBar = () => {
               <a href='/'><PersonIcon fontSize='large'/></a>
             </div>
         </nav>
-    
+      </header>
   )
 }
 

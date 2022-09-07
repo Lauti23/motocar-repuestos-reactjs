@@ -16,12 +16,12 @@ const ItemListContainer = () => {
         .catch(error => console.error(error))
     }, [])
     // console.log(bikes)
-  
+
     return (
-    
-      <ItemList bikes={bikes} />
-    
-  )
+        <main>
+            <ItemList bikes={bikes} />
+        </main>
+    )
 }
 
 export default ItemListContainer
