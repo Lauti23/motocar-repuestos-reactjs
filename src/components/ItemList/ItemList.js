@@ -16,6 +16,7 @@ const ItemList = ({bikes}) => {
                     <p>{bike.marca}</p>
                     <p>{bike.modelo}</p>
                     <p>{bike.precio}</p>
+                    <button href="/">Detalle</button>
                 </div>)
         })}
         
