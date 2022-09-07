@@ -8,6 +8,7 @@ const ItemDetail = ({data}) => {
                 <div className='detailContent'>
                     <h2>{data.marca}</h2>
                     <p>{data.modelo}</p>
+                    <p>{data.descripcion}</p>
                     <p>{data.precio}</p>
                 </div>
             </div>
