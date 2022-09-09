@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from '../ItemList/ItemList'
 import productos from '../mock/productos'
+import './ItemListContainer.css'
+import { useParams } from 'react-router-dom'
 
 const ItemListContainer = () => {
     
     const [bikes , setBikes] = useState([])
-    
+
     const getProducts = () => new Promise((resolve, reject) => {
         setTimeout(() => resolve(productos), 2000)
     })
@@ -19,7 +21,8 @@ const ItemListContainer = () => {
 
     return (
         <main>
-            <ItemList bikes={bikes} />
+            <h1 className='titulo'>MOTOS</h1>
+            <ItemList bikes={bikes} key={bikes.id} />
         </main>
     )
 }

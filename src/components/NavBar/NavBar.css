@@ -9,8 +9,11 @@
     flex-direction: row;
     background-color: #c3c0bb;
 }
-.logo { 
-    max-width: 20%;
+.logo {
+    width: 15%;
+}
+.logo img {
+    width: 100%;
 }
 .list {
     width: 70%;

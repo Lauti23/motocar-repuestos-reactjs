@@ -1,6 +1,7 @@
 import React from 'react'
 import './ItemList.css'
 import Item from '../Item/Item'
+import MotoDetail from '../../views/MotoDetail/MotoDetail'
 import {Link} from 'react-router-dom'
 
 const ItemList = ({bikes}) => {
@@ -13,10 +14,10 @@ const ItemList = ({bikes}) => {
                 return (
                     <div className='card'>
                         <img src={bike.imagen} alt='moto'></img>
-                        <p>{bike.marca}</p>
-                        <p>{bike.modelo}</p>
-                        <p>{bike.precio}</p>
-                        <button href="/">Detalle</button>
+                        <p className='marca'>{bike.marca}</p>
+                        <p className='modelo'>{bike.modelo}</p>
+                        <p className='precio'>${bike.precio}</p>
+                        <button className='botonDetalle' href="/">Detalle</button>
                     </div>
                     )
                 })}
