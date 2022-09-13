@@ -10,6 +10,8 @@ import Home from './views/Home/Home';
 import Contact from './views/Contact/Contact';
 import Bikes from './views/Bikes/Bikes';
 import MotoDetail from './views/MotoDetail/MotoDetail';
+import Cart from './views/Cart/Cart';
+import Productos from './views/Productos/Productos';
 
 
 function App () {
@@ -18,12 +20,12 @@ function App () {
     <>
       <Router>
         <NavBar/>
-        {/* <ItemDetailContainer/> */}
         <Routes>
           <Route path='/' element= {<Home/>} />
-          <Route path='/bikes/:motoId' element= {<Bikes/>} />
           <Route path='/contact' element= {<Contact/>} />
           <Route path='/detalle' element= {<MotoDetail/>} />
+          <Route path='/cart' element= {<Cart/>} />
+          <Route path='/productos/:categoriaId' element={<ItemListContainer/>} />
         </Routes>
       </Router>
     </>

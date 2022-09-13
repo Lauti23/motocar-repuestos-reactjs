@@ -1,0 +1,22 @@
+.card {
+    width: 30%;
+    height: 575px;
+    margin: 1em 0.2em;
+}
+.marca {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    font-weight: bold;
+}
+
+.modelo {
+    text-align: center;
+    font-size: 1.2em;
+    color: black;
+}
+
+.precio {
+    text-align: center;
+    letter-spacing: .5px;
+}

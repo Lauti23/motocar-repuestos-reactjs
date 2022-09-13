@@ -1,28 +1,33 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from '../ItemList/ItemList'
-import productos from '../mock/productos'
+import products from '../mock/products'
 import './ItemListContainer.css'
 import { useParams } from 'react-router-dom'
+
 
 const ItemListContainer = () => {
     
     const [bikes , setBikes] = useState([])
 
-    const getProducts = () => new Promise((resolve, reject) => {
-        setTimeout(() => resolve(productos), 2000)
-    })
+    const {categoriaId} = useParams()
+    
+    useEffect(() => {
+        const getBikes = new Promise(resolve => {
+            setTimeout(() => {
+                resolve(products)
+            }, 1500)
+        })
 
-    useEffect(()=> {
-        getProducts()
-        .then(productos => setBikes(productos))
-        .catch(error => console.error(error))
-    }, [])
-    // console.log(bikes)
+        if (categoriaId) {
+            getBikes.then(res => setBikes(res.filter(bike => bike.categoria === parseInt(categoriaId))))
+        } else {
+            getBikes.then(res => setBikes(res))
+        }
+    }, [categoriaId])
 
     return (
-        <main>
-            <h1 className='titulo'>MOTOS</h1>
-            <ItemList bikes={bikes} key={bikes.id} />
+        <main className='main'>
+            <ItemList bikes={bikes} />
         </main>
     )
 }
