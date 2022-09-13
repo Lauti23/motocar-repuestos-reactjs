@@ -22,7 +22,6 @@ function App () {
         <NavBar/>
         <Routes>
           <Route path='/' element= {<Home/>} />
-          <Route path='/contact' element= {<Contact/>} />
           <Route path='/detalle' element= {<MotoDetail/>} />
           <Route path='/cart' element= {<Cart/>} />
           <Route path='/productos/:categoriaId' element={<ItemListContainer/>} />

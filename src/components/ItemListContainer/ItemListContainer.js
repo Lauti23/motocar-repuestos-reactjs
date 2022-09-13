@@ -19,7 +19,7 @@ const ItemListContainer = () => {
         })
 
         if (categoriaId) {
-            getBikes.then(res => setBikes(res.filter(bike => bike.categoria === parseInt(categoriaId))))
+            getBikes.then(res => setBikes(res.filter(bike => bike.categoria == categoriaId)))
         } else {
             getBikes.then(res => setBikes(res))
         }
