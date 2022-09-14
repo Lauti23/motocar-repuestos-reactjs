@@ -9,7 +9,7 @@ const ItemListContainer = () => {
     
     const [bikes , setBikes] = useState([])
 
-    const {categoriaId} = useParams()
+    const {marcaId} = useParams()
     
     useEffect(() => {
         const getBikes = new Promise(resolve => {
@@ -18,12 +18,12 @@ const ItemListContainer = () => {
             }, 1500)
         })
 
-        if (categoriaId) {
-            getBikes.then(res => setBikes(res.filter(bike => bike.categoria == categoriaId)))
+        if (marcaId) {
+            getBikes.then(res => setBikes(res.filter(bike => bike.categoria == marcaId)))
         } else {
             getBikes.then(res => setBikes(res))
         }
-    }, [categoriaId])
+    }, [marcaId])
 
     return (
         <main className='main'>
