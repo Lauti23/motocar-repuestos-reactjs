@@ -3,7 +3,7 @@ import ItemList from '../ItemList/ItemList'
 import products from '../mock/products'
 import './ItemListContainer.css'
 import { useParams } from 'react-router-dom'
-
+import ItemCount from '../ItemCount/ItemCount'
 
 const ItemListContainer = () => {
     
@@ -19,16 +19,24 @@ const ItemListContainer = () => {
         })
 
         if (marcaId) {
-            getBikes.then(res => setBikes(res.filter(bike => bike.categoria == marcaId)))
+            getBikes.then(res => setBikes(res.filter(bike => bike.marca === marcaId)))
         } else {
             getBikes.then(res => setBikes(res))
         }
     }, [marcaId])
 
+    const onAdd = (cantidad) => {
+        console.log(`Compraste ${cantidad} unidades`)
+    } 
+
     return (
+        <>
         <main className='main'>
             <ItemList bikes={bikes} />
+            <ItemCount initial={1} stock={4} onAdd={onAdd}/>
         </main>
+        
+        </>
     )
 }
 

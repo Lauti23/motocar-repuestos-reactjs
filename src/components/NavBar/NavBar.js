@@ -3,24 +3,24 @@ import img from './logoMotocar.png'
 import './NavBar.css'
 import PersonIcon from '@mui/icons-material/Person';
 import CartWidget from '../CartWidget/CartWidget';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
   return (
       <header>
         <nav className='nav'>
-            <NavLink to='/' className='logo'><img src={img} alt=""></img></NavLink>
+            <Link to='/' className='logo'><img src={img} alt=""></img></Link>
             
             <ul className='list'>
-                <NavLink to='/productos/honda'><li className='items'>HONDA</li></NavLink>
-                <NavLink to='/productos/kawasaki'><li className='items'>KAWASAKI</li></NavLink>
-                <NavLink to='/productos/ktm'><li className='items'>KTM</li></NavLink>
-                <NavLink to='/productos/suzuki'><li className='items'>SUZUKI</li></NavLink>
-                <NavLink to='/productos/yamaha'><li className='items'>YAMAHA</li></NavLink>
+                <Link to='/productos/honda'><li className='items'>HONDA</li></Link>
+                <Link to='/productos/kawasaki'><li className='items'>KAWASAKI</li></Link>
+                <Link to='/productos/ktm'><li className='items'>KTM</li></Link>
+                <Link to='/productos/suzuki'><li className='items'>SUZUKI</li></Link>
+                <Link to='/productos/yamaha'><li className='items'>YAMAHA</li></Link>
             </ul>
             <div className='userIcons'>
-              <NavLink to='/cart'><CartWidget/></NavLink>
-              <NavLink to='/login'><PersonIcon fontSize='large'/></NavLink>
+              <Link to='/cart'><CartWidget/></Link>
+              <Link to='/login'><PersonIcon fontSize='large'/></Link>
             </div>
         </nav>
       </header>

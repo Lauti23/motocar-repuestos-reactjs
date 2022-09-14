@@ -1,23 +1,36 @@
-import React from 'react'
-import { useParams } from 'react-router-dom'
-
+import React, {useState} from 'react'
+import ItemCount from '../ItemCount/ItemCount'
+import './ItemDetail.css'
+import { Link } from 'react-router-dom'
 
 const ItemDetail = ({data}) => {
     
+    const [carrito, setCarrito] = useState(false)
+
+    const onAdd = (cantidad) => {
+        setCarrito(true)
+    } 
 
     return (
-        <div className='dataDetail'>
+        <>
+        
             <div className='detail'>
-                <img src={data.imagen} alt="moto"></img>
+                <img className='imagen' src={data.imagen} alt="moto"></img>
                 <div className='detailContent'>
-                    <h2>{data.marca}</h2>
-                    <p>{data.producto}</p>
-                    <p>{data.modelo}</p>
-                    <p>{data.descripcion}</p>
-                    <p>{data.precio}</p>
+                    <h2 className='marca'>{data.marca}</h2>
+                    <p className='modelo'>{data.modelo}</p>
+                    <p className='descripcion'>{data.descripcion}</p>
+                    <p className='precio'>${data.precio}</p>
+                    {
+                        carrito
+                        ? <Link className='linkCarrito' to='/cart'>Finalizar compra</Link>
+                        : <ItemCount initial={1} stock={4} onAdd={onAdd}/>
+                    }
                 </div>
             </div>
-        </div>
+        
+            
+        </>
     )
 }
 

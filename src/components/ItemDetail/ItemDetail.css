@@ -1,0 +1,28 @@
+.detail {
+    width: 60%;
+    margin: 2em auto;
+}
+.imagen {
+    width: 100%;
+}
+
+.marca {
+    text-align: left;
+}
+
+.modelo {
+    text-align: left;
+}
+
+.descripcion {
+    text-align: left;
+}
+
+.precio {
+    text-align: left;
+}
+
+.linkCarrito {
+    color: black;
+    margin: 0.5em auto;
+}
