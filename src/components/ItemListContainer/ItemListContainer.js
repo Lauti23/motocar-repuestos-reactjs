@@ -33,7 +33,6 @@ const ItemListContainer = () => {
         <>
         <main className='main'>
             <ItemList bikes={bikes} />
-            <ItemCount initial={1} stock={4} onAdd={onAdd}/>
         </main>
         
         </>
