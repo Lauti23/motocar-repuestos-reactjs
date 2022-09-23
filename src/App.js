@@ -9,7 +9,7 @@ import CartProvider from './Context/CartContext';
 
 //VIEWS
 import Home from './views/Home/Home';
-import Cart from './views/Cart/Cart';
+import Cart from './components/Cart/Cart';
 
 export const CartContext = React.createContext('')
 
@@ -18,8 +18,8 @@ function App () {
   return (
     <>
       <Router>
-        <NavBar/>
         <CartProvider>
+          <NavBar/>
           <Routes>
             <Route path='/' element= {<Home/>} />
             <Route path='/cart' element= {<Cart/>} />

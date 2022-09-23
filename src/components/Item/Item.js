@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import './Item.css'
 import { Link } from 'react-router-dom';
+import { CartContext } from '../../Context/CartContext' 
 
 const Item = ({data}) => {
 

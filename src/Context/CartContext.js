@@ -1,4 +1,5 @@
 import React, {useState, useContext} from 'react'
+import Cart from '../components/Cart/Cart'
 
 const CartContext = React.createContext([])
 
@@ -29,6 +30,14 @@ const CartProvider = ({children}) => {
     const borrarDelCarrito = (id) => {
         setCarrito(carrito.filter(producto => producto.id !== id ))
     }
+
+    const precioTotal = () => {
+        return carrito.reduce((prev, act) => prev + act.cantidad * act.precio, 0);
+    }
+
+    const totalProductos = () => {
+        carrito.reduce((acumulador, productoActual) => acumulador + productoActual.cantidad, 0)
+    }
     
     console.log ('carrito: ', carrito)
     return (
@@ -36,7 +45,10 @@ const CartProvider = ({children}) => {
             limpiarCarrito,
             enCarrito,
             borrarDelCarrito,
-            agregarAlCarrito
+            agregarAlCarrito,
+            precioTotal,
+            totalProductos,
+            carrito
         }}>
             {children}
         </CartContext.Provider>

@@ -1,0 +1,26 @@
+.cart {
+    width: 80%;
+    margin: 2em auto;
+}
+
+.cartTitle {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.title {
+    margin: 10px;
+}
+
+.sinProductos {
+    font-style: italic;
+}
+
+.linkTienda {
+    margin: 10px;
+}
