@@ -1,27 +1,31 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import ItemList from '../ItemList/ItemList'
-import products from '../mock/products'
 import './ItemListContainer.css'
 import { useParams } from 'react-router-dom'
-import ItemCount from '../ItemCount/ItemCount'
+import { CartContext } from '../../App'
+import {getFirestore, collection, getDocs, query, where} from 'firebase/firestore'
 
 const ItemListContainer = () => {
     
+    const nombre = useContext(CartContext);
+    
+
     const [bikes , setBikes] = useState([])
 
     const {marcaId} = useParams()
     
     useEffect(() => {
-        const getBikes = new Promise(resolve => {
-            setTimeout(() => {
-                resolve(products)
-            }, 1500)
-        })
+        const querydb = getFirestore()
+        const queryCollection = collection(querydb, 'motos')
+        
 
         if (marcaId) {
-            getBikes.then(res => setBikes(res.filter(bike => bike.marca === marcaId)))
+            const queryFiltro = query(queryCollection, where('marca', '==', marcaId))
+            getDocs(queryFiltro)
+                .then(res => setBikes(res.docs.map(moto => ({id: moto.id, ...moto.data()}))))
         } else {
-            getBikes.then(res => setBikes(res))
+            getDocs(queryCollection)
+                .then(res => setBikes(res.docs.map(moto => ({id: moto.id, ...moto.data()}))))
         }
     }, [marcaId])
 
