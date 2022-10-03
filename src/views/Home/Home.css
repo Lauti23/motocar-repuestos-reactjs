@@ -1,5 +1,32 @@
 .titleHome {
-    margin: 1em auto;
+    
+    margin-top: 1em;
     text-align: center;
-    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 3em;
+}
+
+.subtitleHome {
+    margin-bottom: 1em auto;
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+.imageContainer {
+    width: 95%;
+    height: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2em auto;
+    background-image: url('../Home/logos/imagenHome.jpg');
+
+}
+.imageContainer img {
+    height: 150px;
+    
 }

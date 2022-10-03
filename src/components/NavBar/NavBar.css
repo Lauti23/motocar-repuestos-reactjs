@@ -8,9 +8,13 @@
     display: flex;
     flex-direction: row;
     background-color: black;
+    justify-content: space-around;
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: 2px;
 }
 .logo {
     width: 10%;
+    padding: 5px;
 }
 .logo img {
     width: 100%;
