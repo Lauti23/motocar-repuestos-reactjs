@@ -3,7 +3,7 @@ import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
 import { Link } from 'react-router-dom'
 import {useCartContext} from '../../Context/CartContext'
-import Footer from '../Footer/Footer'
+
 
 const ItemDetail = ({data}) => {
     
@@ -18,23 +18,22 @@ const ItemDetail = ({data}) => {
     
     return (
         <>
-        
-            <div className='detail'>
-                <img className='imagen' src={data.imagen} alt="moto"></img>
-                <div className='detailContent'>
-                    <h2 className='marca'>{data.marca}</h2>
-                    <p className='modelo'>{data.modelo}</p>
-                    <p className='descripcion'>{data.descripcion}</p>
-                    <p className='precio'>${data.precio}</p>
-                    {
-                        carrito
-                        ? <Link className='linkCarrito' to='/cart'>Finalizar compra</Link>
-                        : <ItemCount initial={1} stock={4} onAdd={onAdd}/>
-                    }
+            <main className='main'>
+                <div className='detail'>
+                    <img className='imagen' src={data.imagen} alt="moto"></img>
+                    <div className='detailContent'>
+                        <h2 className='marca'>{data.marca}</h2>
+                        <p className='modelo'>{data.modelo}</p>
+                        <p className='descripcion'>{data.descripcion}</p>
+                        <p className='precio'>${data.precio}</p>
+                        {
+                            carrito
+                            ? <Link className='linkCarrito' to='/cart'><button>Finalizar compra</button></Link>
+                            : <ItemCount initial={1} stock={4} onAdd={onAdd}/>
+                        }
+                    </div>
                 </div>
-            </div>
-            <Footer />
-            
+            </main>
         </>
     )
 }

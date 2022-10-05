@@ -1,28 +1,55 @@
 .detail {
-    width: 60%;
-    margin: 2em auto;
+    display: flex;
+    width: 80%;
 }
-.imagen {
-    width: 100%;
+
+.detail img {
+    max-width: 700px;
+}
+
+.detailContent {
+    display: flex;
+    flex-direction: column;
 }
 
 .marca {
-    text-align: left;
+    margin-top: 2em;
+    margin-bottom: .5em;   
 }
 
 .modelo {
-    text-align: left;
+    margin-bottom: 1em;
 }
 
 .descripcion {
-    text-align: left;
+    font-family: 'Manrope', sans-serif;
+    margin-bottom: 2em;
 }
 
 .precio {
-    text-align: left;
+    font-size: 1.2em;
 }
 
 .linkCarrito {
-    color: black;
-    margin: 0.5em auto;
+    margin: 2em auto;
+    width: 30%;
+    
+    
+}
+
+.linkCarrito button {
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.linkCarrito button:hover {
+    cursor: pointer;
 }

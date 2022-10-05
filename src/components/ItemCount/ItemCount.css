@@ -1,5 +1,9 @@
 .itemCount {
-    background-color: gray;
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-family: 'Manrope', sans-serif;
+    color: white;
     width: 50%;
     margin: 1em auto;
     display: flex;
@@ -7,9 +11,31 @@
     align-items: center;
 }
 
-.botones {
+.botonRestar {
     width: 40%;
-    font-weight: bold;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+    margin: 1px;
+    font-size: 1.5em;
+}
+
+.botonRestar:hover {
+    cursor: pointer;
+}
+
+
+.botonSumar {
+    width: 40%;
+    background-color: green;
+    border: 1px solid green;
+    border-radius: 5px;
+    margin: 1px;
+    font-size: 1.5em;
+}
+
+.botonSumar:hover {
+    cursor: pointer;
 }
 
 .numero {
@@ -24,4 +50,17 @@
 
 .agregar button {
     width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.agregar button:hover {
+    cursor: pointer;
 }

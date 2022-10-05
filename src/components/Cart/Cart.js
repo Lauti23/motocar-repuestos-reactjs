@@ -43,6 +43,7 @@ const Cart = () => {
 
     return (
         <div>
+            <h1 className='cartTitle'>CARRITO</h1>
             {carrito.map(producto => <ItemCart key={producto.id} producto={producto} />)}
             <p>
                 Total: {precioTotal()}

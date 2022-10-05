@@ -28,5 +28,9 @@
 }
 .imageContainer img {
     height: 150px;
-    
+    transition: all 0.5s;
+}
+
+.imageContainer img:hover {
+    transform: scale(1.2);
 }

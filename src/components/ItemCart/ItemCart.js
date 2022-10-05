@@ -7,7 +7,6 @@ const ItemCart = ({ producto }) => {
     
     return (
         <div className='cart'>
-            <h1 className='cartTitle'>CARRITO</h1>
             <img src={producto.imagen} alt={producto.imagen}></img>
             <div>
                 <p>{producto.title}</p>

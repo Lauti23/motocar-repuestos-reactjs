@@ -1,5 +1,6 @@
 import React from 'react'
 import './Footer.css'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
@@ -10,9 +11,9 @@ const Footer = () => {
                 <div className='socialMedia'>
                     <p>SEGUINOS EN NUESTRAS REDES SOCIALES</p>
                     <div className='icons'>
-                        <i className="fa-brands fa-instagram"></i>
-                        <i className="fa-brands fa-square-facebook"></i>
-                        <i className="fa-brands fa-square-whatsapp"></i>
+                        <Link to='/'><i className="fa-brands fa-instagram"></i></Link>
+                        <Link to='/'><i className="fa-brands fa-square-facebook"></i></Link>
+                        <Link to='/'><i className="fa-brands fa-square-whatsapp"></i></Link>
                     </div>
                 </div>
             </div>

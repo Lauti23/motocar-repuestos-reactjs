@@ -23,3 +23,11 @@
     font-size: 1.5em;
 }
 
+.icons i {
+    transition: all 0.5s;
+}
+
+.icons i:hover {
+    transform: scale(1.1);
+}
+
