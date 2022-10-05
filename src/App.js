@@ -10,6 +10,7 @@ import CartProvider from './Context/CartContext';
 //VIEWS
 import Home from './views/Home/Home';
 import Cart from './components/Cart/Cart';
+import Footer from './components/Footer/Footer';
 
 export const CartContext = React.createContext('')
 
@@ -27,6 +28,7 @@ function App () {
             <Route path='/detalle/:detalleId' element={<ItemDetailContainer/>} />
             <Route path='/productos/:marcaId/detalle/:detalleId' element={<ItemDetail />} />
           </Routes>
+          <Footer/>
         </CartProvider>
       </Router>
     </>

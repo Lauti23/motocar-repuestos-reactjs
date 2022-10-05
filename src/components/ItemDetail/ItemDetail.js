@@ -3,6 +3,7 @@ import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
 import { Link } from 'react-router-dom'
 import {useCartContext} from '../../Context/CartContext'
+import Footer from '../Footer/Footer'
 
 const ItemDetail = ({data}) => {
     
@@ -14,7 +15,7 @@ const ItemDetail = ({data}) => {
         setCarrito(true);
         agregarAlCarrito(data, cantidad)
     } 
-    console.log ('carrito: ', carrito)
+    
     return (
         <>
         
@@ -32,7 +33,7 @@ const ItemDetail = ({data}) => {
                     }
                 </div>
             </div>
-        
+            <Footer />
             
         </>
     )

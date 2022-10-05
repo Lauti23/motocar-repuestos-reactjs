@@ -1,0 +1,25 @@
+.footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-weight: 800;
+    padding: 4em 0;
+    margin-top: 10em;
+}
+
+.footer p {
+    font-size: 1.5em;
+}
+
+.icons {
+    margin: 0.5em auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5em;
+}
+
