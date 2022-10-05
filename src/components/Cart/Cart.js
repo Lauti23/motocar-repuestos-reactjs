@@ -17,10 +17,10 @@ const Cart = () => {
             telefono: '15645825',
             direccion: 'almirante brown',
         },
-        productos: carrito.map(producto => ({id: producto.id, title: producto.title, price: producto.price, cantidad: producto.cantidad})),
+        productos: carrito.map(producto => ({id: producto.id, title: producto.marca, price: producto.precio, cantidad: producto.cantidad})),
         total: precioTotal(),
     }
-
+    
     const terminarCompra = () => {
         const db = getFirestore()
         const ordenColeccion = collection(db, 'ordenes')
