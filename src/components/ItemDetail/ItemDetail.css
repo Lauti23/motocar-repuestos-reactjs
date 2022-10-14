@@ -12,21 +12,21 @@
     flex-direction: column;
 }
 
-.marca {
+.marcaDetail {
     margin-top: 2em;
     margin-bottom: .5em;   
 }
 
-.modelo {
+.modeloDetail {
     margin-bottom: 1em;
 }
 
-.descripcion {
+.descripcionDetail {
     font-family: 'Manrope', sans-serif;
     margin-bottom: 2em;
 }
 
-.precio {
+.precioDetail {
     font-size: 1.2em;
 }
 

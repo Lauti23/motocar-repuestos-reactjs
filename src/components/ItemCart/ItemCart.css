@@ -1,0 +1,36 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+th {
+    background-color: black;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    text-align: center;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.cartImg {
+    max-width: 200px;
+}
+
+.delete {
+    background-color: red;
+    border-radius: 5px;
+    width: 25%;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.delete:hover {
+    cursor: pointer;
+}

@@ -25,3 +25,38 @@
 .linkTienda {
     margin: 10px;
 }
+
+.totalPrice {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: end;
+    margin-right: 200px;
+}
+
+.btnContainer {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.terminarCompra {
+    width: 15%;
+    margin-right: 25px;
+    color: white;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+.terminarCompra:hover {
+    cursor: pointer;
+}

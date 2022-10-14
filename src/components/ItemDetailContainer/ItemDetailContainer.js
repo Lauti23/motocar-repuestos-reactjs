@@ -16,10 +16,6 @@ const ItemDetailContainer = () => {
     .then(res => setData({id: res.id, ...res.data()}))
   }, [detalleId])
 
-  const onAdd = (cantidad) => {
-    
-  }
-
   return (
     <ItemDetail data={data}/>
   )

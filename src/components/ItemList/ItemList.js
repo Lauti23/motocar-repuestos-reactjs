@@ -1,7 +1,6 @@
 import React from 'react'
 import './ItemList.css'
 import Item from '../Item/Item'
-import Footer from '../Footer/Footer'
 
 
 const ItemList = ({bikes = []}) => {

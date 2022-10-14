@@ -22,10 +22,10 @@ const ItemDetail = ({data}) => {
                 <div className='detail'>
                     <img className='imagen' src={data.imagen} alt="moto"></img>
                     <div className='detailContent'>
-                        <h2 className='marca'>{data.marca}</h2>
-                        <p className='modelo'>{data.modelo}</p>
-                        <p className='descripcion'>{data.descripcion}</p>
-                        <p className='precio'>${data.precio}</p>
+                        <h2 className='marcaDetail'>{data.marca}</h2>
+                        <p className='modeloDetail'>{data.modelo}</p>
+                        <p className='descripcionDetail'>{data.descripcion}</p>
+                        <p className='precioDetail'>${data.precio}</p>
                         {
                             carrito
                             ? <Link className='linkCarrito' to='/cart'><button>Finalizar compra</button></Link>

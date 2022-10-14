@@ -1,15 +1,11 @@
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useEffect, useState } from 'react'
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css'
 import { useParams } from 'react-router-dom'
-import { CartContext } from '../../App'
 import {getFirestore, collection, getDocs, query, where} from 'firebase/firestore'
 
 const ItemListContainer = () => {
     
-    const nombre = useContext(CartContext);
-    
-
     const [bikes , setBikes] = useState([])
 
     const {marcaId} = useParams()
@@ -28,10 +24,6 @@ const ItemListContainer = () => {
                 .then(res => setBikes(res.docs.map(moto => ({id: moto.id, ...moto.data()}))))
         }
     }, [marcaId])
-
-    const onAdd = (cantidad) => {
-        console.log(`Compraste ${cantidad} unidades`)
-    } 
 
     return (
         <>

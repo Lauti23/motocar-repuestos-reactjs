@@ -19,31 +19,6 @@ const Item = ({data}) => {
                 </div>                       
             </div>
         </>
-    // <Card className='card'>
-    //     <CardActionArea>
-    //         <CardMedia
-    //             component="img" image={data.imagen}
-    //         />
-    //         <CardContent>
-    //             <Typography className='marca' gutterBottom variant="h5" component="div">
-    //                 {data.marca}
-    //             </Typography>
-    //             <Typography className='modelo' variant="body2" color="text.secondary">
-    //                 {data.modelo}
-    //             </Typography>
-    //             <Typography className='precio'>
-    //                 ${data.precio} 
-    //             </Typography>
-    //         </CardContent>
-    //     </CardActionArea>
-    //     <CardActions>
-    //         <Link to={`/detalle/${data.id}`}>
-    //             <Button className='botonDetalle' size="small" color="primary">
-    //                 DETALLE
-    //             </Button>
-    //         </Link>
-    //     </CardActions>
-    // </Card>
     );
 }
 

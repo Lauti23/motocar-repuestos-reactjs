@@ -45,10 +45,12 @@ const Cart = () => {
         <div>
             <h1 className='cartTitle'>CARRITO</h1>
             {carrito.map(producto => <ItemCart key={producto.id} producto={producto} />)}
-            <p>
-                Total: {precioTotal()}
+            <p className='totalPrice'>
+                Total: ${precioTotal()}
             </p>
-            <button onClick={terminarCompra}>Terminar compra</button>
+            <div className='btnContainer'>
+                <button className='terminarCompra' onClick={terminarCompra}>Terminar compra</button>
+            </div>
         </div>
     )
 }

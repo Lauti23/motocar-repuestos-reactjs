@@ -26,30 +26,35 @@
 }
 
 .marca {
-    text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
     font-style: italic;
+    text-transform: uppercase;
     font-size: 1.2em;
+    margin-bottom: 0.2em;
 }
 
 .modelo {
     font-family: 'Manrope', sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    margin-bottom: 0.2em;
 }
 
 .precio {
     font-family: 'Manrope', sans-serif;
-    letter-spacing: 1px;
+    font-size: 1.1em;
     font-weight: bold;
+    margin-bottom: 1em;
+
 }
+
 
 .link {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1em auto;
+    margin: 0 auto;
 }
 
 .btnDetalle {
