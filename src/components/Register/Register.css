@@ -1,0 +1,89 @@
+.form {
+    width: 80%;
+    margin: 1em auto;
+    color: white;
+    background-color: black;
+    border: 5px solid black;
+    border-radius: 15px;
+}
+.fieldsetForm {
+    width: 100%;  
+    border: 1px solid black;
+}
+.listForm {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.itemsForm {
+    width: 70%;
+    margin: 1em auto;
+}
+
+.labelForm {
+    width: 100%;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+
+.inputForm {
+    width: 100%;
+    margin-top: 1em;
+    height: 3em;
+    text-align: center;
+}
+
+.register {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 3em;
+    text-transform: uppercase;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.btnLogin {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 50%;
+    text-align: center;
+}
+
+.btnLogin:hover {
+    cursor: pointer;
+}
+
+.itemBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnGotAcc {
+    color: rgb(44, 110, 231);
+    text-decoration: underline;
+    background-color: black;
+    border: none;
+    margin-top: 1em;
+}
+
+.btnGotAcc:hover {
+    cursor: pointer;
+}
+
+.error {
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+}

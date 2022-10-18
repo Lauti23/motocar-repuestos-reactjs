@@ -1,31 +1,42 @@
-import React from 'react'
 import { useCartContext } from '../../Context/CartContext'
 import './Cart.css'
 import { Link } from 'react-router-dom'
 import ItemCart from '../ItemCart/ItemCart'
 import {addDoc, collection, getFirestore} from 'firebase/firestore'
+import { useAuth } from '../../Context/AuthContext'
+import Swal from 'sweetalert2'
 
 
 const Cart = () => {
 
-    const {carrito, precioTotal} = useCartContext()
+    const {carrito, precioTotal, limpiarCarrito} = useCartContext()
+
+    const {user} = useAuth()
 
     const orden = {
         comprador: {
-            nombre: 'Victoria',
-            email: 'vicky@gmail.com',
-            telefono: '15645825',
-            direccion: 'almirante brown',
+            email: user.email,
+            
         },
         productos: carrito.map(producto => ({id: producto.id, title: producto.marca, price: producto.precio, cantidad: producto.cantidad})),
         total: precioTotal(),
     }
+
+    console.log(orden)
     
     const terminarCompra = () => {
         const db = getFirestore()
         const ordenColeccion = collection(db, 'ordenes')
         addDoc(ordenColeccion, orden)
-        .then(({id}) => console.log(id))
+        .then(({id}) => console.log(id));
+        limpiarCarrito()
+        Swal.fire({
+            icon: 'success',
+            title: 'Compra realizada con exito',
+            timer: 1500,
+            showConfirmButton: false,
+        })
+
     }
 
     if (carrito.length === 0) {

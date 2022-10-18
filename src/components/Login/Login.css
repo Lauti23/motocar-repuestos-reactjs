@@ -1,0 +1,21 @@
+.btnNoAcc {
+    color: rgb(44, 110, 231);
+    text-decoration: underline;
+    background-color: black;
+    border: none;
+    margin-top: 1em;
+}
+
+.btnNoAcc:hover {
+    cursor: pointer;
+}
+
+.formTitle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 3em;
+    text-transform: uppercase;
+    margin-top: 1em;
+    text-align: center;
+}

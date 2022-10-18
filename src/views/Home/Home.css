@@ -1,6 +1,5 @@
 .titleHome {
-    
-    margin-top: 1em;
+    margin-top: .5em;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     font-weight: 800;
@@ -33,4 +32,24 @@
 
 .imageContainer img:hover {
     transform: scale(1.2);
+}
+
+.logout {
+    text-align: end;
+    margin-top: 1em;
+    margin-right: 5em;
+    font-family: 'Manrope', sans-serif;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.logout:hover {
+    cursor: pointer;
+}
+
+.currentUser {
+    text-align: end;
+    margin-top: 1em;
+    margin-right: 5em;
+    font-family: 'Manrope', sans-serif;
 }

@@ -6,10 +6,23 @@ import suzuki from '../Home/logos/Suzuki-Logo.png'
 import yamaha from '../Home/logos/Logo-Yamaha.png'
 import './Home.css'
 import { Link } from 'react-router-dom'
+import { useAuth } from '../../Context/AuthContext'
+
 
 const Home = () => {
+
+    const {user, logout, loading} = useAuth()
+
+    const handleLogout = async () => {
+        await logout()
+    }
+    
+    if (loading) return <p>Cargando...</p>
+
     return (
         <>
+            <p className='currentUser'>¡Bienvenido {user.email}!</p>
+            <p onClick={handleLogout} className='logout'>Cerrar Sesión</p>
             <h1 className='titleHome'>MOTOCAR REPUESTOS</h1>
             <p className='subtitleHome'>Lo mejor para los mejores</p>
             <div className='imageContainer'>

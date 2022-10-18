@@ -19,8 +19,8 @@ const NavBar = () => {
                 <Link to='/productos/yamaha'><li className='items'>YAMAHA</li></Link>
             </ul>
             <div className='userIcons'>
-              <Link to='/cart'><CartWidget/></Link>
-              <Link to='/login'><PersonIcon fontSize='large'/></Link>
+              <Link className='cartWidget' to='/cart'><CartWidget /></Link>
+              <Link className='userIcon' to='/login'><PersonIcon fontSize='large'/></Link>
             </div>
         </nav>
       </header>
