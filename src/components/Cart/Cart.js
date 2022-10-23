@@ -5,7 +5,7 @@ import ItemCart from '../ItemCart/ItemCart'
 import {addDoc, collection, getFirestore} from 'firebase/firestore'
 import { useAuth } from '../../Context/AuthContext'
 import Swal from 'sweetalert2'
-import Confirmacion from '../Confirmacion/Confirmacion'
+
 
 
 const Cart = () => {
