@@ -5,6 +5,7 @@ import ItemCart from '../ItemCart/ItemCart'
 import {addDoc, collection, getFirestore} from 'firebase/firestore'
 import { useAuth } from '../../Context/AuthContext'
 import Swal from 'sweetalert2'
+import Confirmacion from '../Confirmacion/Confirmacion'
 
 
 const Cart = () => {
@@ -28,15 +29,12 @@ const Cart = () => {
         const db = getFirestore()
         const ordenColeccion = collection(db, 'ordenes')
         addDoc(ordenColeccion, orden)
-        .then(({id}) => console.log(id));
-        limpiarCarrito()
-        Swal.fire({
+        .then(({id}) => Swal.fire({
             icon: 'success',
-            title: 'Compra realizada con exito',
-            timer: 1500,
-            showConfirmButton: false,
-        })
-
+            title: `Compra realizada, con este codigo podras seguir tu envio: ${id}`,
+            showConfirmButton: true,
+        }))
+        limpiarCarrito()
     }
 
     if (carrito.length === 0) {
