@@ -41,7 +41,7 @@ const CartProvider = ({children}) => {
     }
 
     const totalProductos = () => {
-        return carrito.length
+        return carrito.reduce((acc, producto) => acc + producto.cantidad, 0)
     }
     
     return (
